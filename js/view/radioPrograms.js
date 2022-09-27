@@ -1,4 +1,4 @@
-import updateModel from "./../utils/updateModel.js"
+import updateModel from './../utils/updateModel.js'
 
 function init(getData) {
 	const radioBtns = document.querySelectorAll('input[name="program"]')

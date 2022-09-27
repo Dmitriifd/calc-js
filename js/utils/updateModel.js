@@ -1,10 +1,10 @@
 function updateModel(element, data) {
-    element.dispatchEvent(
+	element.dispatchEvent(
 		new CustomEvent('updateForm', {
 			bubbles: true,
-			detail: {...data}
+			detail: { ...data },
 		})
-	);
+	)
 }
 
-export default updateModel;
+export default updateModel
