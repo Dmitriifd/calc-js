@@ -27,8 +27,11 @@ function init(getData) {
 		let sliderValue = slider.noUiSlider.get()
 		sliderValue = sliderValue.split('.')[0]
 		sliderValue = parseInt(String(sliderValue).replace(/ /g, ''))
+
 		updateModel(slider, { cost: sliderValue, onUpdate: 'costSlider' })
 	})
+
+	return slider
 }
 
 export default init
