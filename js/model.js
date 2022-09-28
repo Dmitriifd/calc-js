@@ -1,5 +1,8 @@
 let data = {
 	selectedProgram: 0.1,
+	cost: 12_000_000,
+	minPrice: 375000,
+	maxPrice: 100_000_000,
 	programs: {
 		base: 0.1,
 		it: 0.047,
