@@ -1,3 +1,5 @@
+import updateModel from './../utils/updateModel.js'
+
 function init(getData) {
 	const data = getData()
 	const input = document.querySelector('#input-cost')
@@ -22,6 +24,9 @@ function init(getData) {
 		if (value >= data.minPrice && value <= data.maxPrice) {
 			input.closest('.param__details').classList.remove('param__details--error')
 		}
+
+		// Обновить модель
+		updateModel(input, { cost: value, onUpdate: 'inputCost' })
 	})
 
 	input.addEventListener('change', function () {
@@ -36,6 +41,9 @@ function init(getData) {
 			input.closest('.param__details').classList.remove('param__details--error')
 			cleaveInput.setRawValue(data.minPrice)
 		}
+
+		// Обновить модель
+		updateModel(input, { cost: +cleaveInput.getRawValue(), onUpdate: 'inputCost' })
 	})
 }
 
