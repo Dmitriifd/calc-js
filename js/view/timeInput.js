@@ -16,7 +16,7 @@ function init(getData) {
 	input.addEventListener('input', function () {
 		const value = +cleaveInput.getRawValue()
 
-		// Проверка на мин и макс год
+		// Проверка на мин и макс цену
 		if (value < data.minYear || value > data.maxYear) {
 			input.closest('.param__details').classList.add('param__details--error')
 		}
