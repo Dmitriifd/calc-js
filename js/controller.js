@@ -64,5 +64,10 @@ window.onload = function () {
 		if (data.onUpdate !== 'inputPayment') {
 			cleavePayment.setRawValue(data.payment)
 		}
+
+		// paymentSlider
+		if (data.onUpdate !== 'paymentSlider') {
+			sliderPayment.noUiSlider.set(data.paymentPercents * 100)
+		}
 	}
 }
